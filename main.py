@@ -128,18 +128,21 @@ if __name__ == "__main__":
     plt.title("xy plane")
     plt.xlabel("x")
     plt.ylabel("y")
+    plt.savefig("xy.png")
     plt.show()
 
     plt.plot(time, result[:, 2])
     plt.title("height vs time")
     plt.xlabel("time")
     plt.ylabel("height")
+    plt.savefig("height.png")
     plt.show()
 
     plt.plot(time, (result[:, 3] % (2 * np.pi)))
     plt.title("yaw vs time")
     plt.xlabel("time")
     plt.ylabel("yaw")
+    plt.savefig("yaw.png")
     plt.show()
 
     plt.plot(time, control_vect[:, 0], label="x velocity")
@@ -149,11 +152,13 @@ if __name__ == "__main__":
     plt.xlabel("time")
     plt.ylabel("control input")
     plt.legend()
+    plt.savefig("cont_vel.png")
     plt.show()
 
     plt.plot(time, control_vect[:, 3])
     plt.title("control angular velocity vs time")
     plt.xlabel("time")
     plt.ylabel("control angular velocity")
+    plt.savefig("ang_vel.png")
     plt.show()
 
